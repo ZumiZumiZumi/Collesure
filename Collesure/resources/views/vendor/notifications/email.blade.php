@@ -6,7 +6,8 @@
 @if ($level === 'error')
 # @lang('Whoops!')
 @else
-# @lang('Collesureアカウント登録の確認メールです。')
+    
+# @lang('Hello!')
 @endif
 @endif
 

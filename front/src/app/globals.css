@@ -17,6 +17,7 @@
 }
 
 body {
+  width: 100%;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,3 +26,43 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* ヘッダーcss始まり */
+.logo {
+  width: 100vw;
+}
+
+@media (min-width: 625px) {
+  .list {
+    list-style-type: none;
+    padding: 0; 
+    display: flex; 
+    width:96vw;
+  }
+
+  .headlist {
+    width:20vw;
+  }
+}
+
+@media (max-width: 625px) {
+  .list {
+    list-style-type: none;
+    padding: 0; 
+    display: flex; 
+    width:610px;
+  }
+
+  .headlist {
+    width:125px;
+  }
+
+  .uldiv {
+    width:610px;
+  }
+}
+/* ヘッダーcss終わり */
+  
+
+
+
