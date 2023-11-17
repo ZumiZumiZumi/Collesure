@@ -2,7 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
-import {Grid} from '@mui/material'
+import {Grid, Icon} from '@mui/material'
+import LoginIcon from '@mui/icons-material/Login';
+import SearchIcon from '@mui/icons-material/Search';
+import Header from './components/Header';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,49 +23,59 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
-        {/* ヘッダーhtml始まり */}
-        <div className='bg-white-600'>
-          <div className='flex mb-14 mt-2 items-center'>
-          <h5 className = "mr-auto ">Collesure</h5>
-          <div className='flex items-center mx-auto mt-4 '>
-            <input className ='w-80 mr-6 rounded-md border border-black' type = "text" name = "serach" placeholder='キーワードを入力して検索'></input>
-            <button type = "submit" className='ml-4'>検索</button>
-          </div>
-          <button className='mr-4'>ログイン</button>
-        </div>
+        <Header/>
+        <div className='flex'>
+        {/* サイドバーhtml始まり */}
+          <div className='sidebarbox'>
+            <h2 className='sidebarsize  text-center text-orange-color'>Home</h2>
+            <ul className='sidebarsize border-y-4 border-orange-color rounded-md text-center'>
+              <li className=''>
+                <Link className='py-2 block hover:bg-gray-200 border-x-2' href ='/'>
+                  トップ
+                </Link>
+                </li>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x-2' href = '/search'>検索</Link>
+              </li>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x-2' href = '/post'>投稿</Link>
+              </li>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x-2' href='/mypage'>マイページ</Link>
+              </li>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x-2' href = '/tresure'>開拓</Link>
+              </li>
+            </ul>
 
-          <div className='uldiv flex w-screen justify-center items-center border-b-4 border-orange-color'>
-            <ul className='list  text-center '>
-              <li className='headlist  bg-orange-color px-4 py-2  hover:bg-gray-100 rounded-t-3xl'>
-                  <Link className='no-underline' href = "/">
-                    トップ
-                  </Link>
+            <h2 className='sidebarsize pt-10 text-center text-orange-color'>#タグ</h2>
+            <ul className='sidebarsize border-y-4 border-orange-color rounded-md text-center'>
+              <li className=''>
+                <Link className='py-2 block hover:bg-gray-200 border-x' href ='/'>
+                  トップ
+                </Link>
+                </li>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x' href = '/search'>検索</Link>
               </li>
-              <li className='headlist block bg-blue-color px-4 py-2 hover:bg-gray-100 rounded-t-3xl'>
-                  <Link className='no-underline' href = "/">
-                    検索
-                  </Link>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x' href = '/post'>投稿</Link>
               </li>
-              <li className='headlist block bg-green-color px-4 py-2 hover:bg-gray-100 rounded-t-3xl'>
-                  <Link className='no-underline' href = "/">
-                    登校
-                  </Link>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x' href='/mypage'>マイページ</Link>
               </li>
-              <li className='headlist block bg-pink-color px-4 py-2 hover:bg-gray-100 rounded-t-3xl'>
-                  <Link className='no-underline' href = "/">
-                    マイページ
-                  </Link>
-              </li>
-              <li className='headlist block bg-yellow-color px-4 py-2 hover:bg-gray-100 rounded-t-3xl'>
-                  <Link className='no-underline' href = "/">
-                    開拓
-                  </Link>
+              <li>
+                <Link className='py-2 block hover:bg-gray-200 border-x' href = '/tresure'>開拓</Link>
               </li>
             </ul>
           </div>
+
+
+          {/* 以下ページコンポーネント領域 */}
+          <div className=''>
+            {/* {children} */}
+          </div>
         </div>
-        {/* ヘッダーhtml終わり */}
-        
       </body>
     </html>
   )
