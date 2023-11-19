@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Link from 'next/link'
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
@@ -20,13 +19,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body className="">
         <Header/>
         <div className='flex'>
         {/* サイドバーhtml始まり */}
-
+        <Sidebar/>
 
           {/* 以下ページコンポーネント領域 */}
           <div className=''>

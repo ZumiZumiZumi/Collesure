@@ -98,21 +98,46 @@ body {
     width:10vw;
   }
 
-  .sidebar-textcolor:target:has(href = "/") {
+  .borderorange {
+    border-color: #FFB258;
+  }
+
+  .textorange {
     color: #FFB258;
   }
 
-  .sidebar-bordercolor:target:has(href = "/") {
-    color: #FFB258;
+  .borderblue {
+    border-color: #60C6FF;
   }
 
-  .sidebar-textcolor:target:has(href = "/search") {
+  .textblue {
     color: #60C6FF;
   }
 
-  .sidebar-bordercolor:target:has(href = "/search") {
-    color: #60C6FF;
+  .bordergreen {
+    border-color: #2BC46F;
   }
+
+  .textgreen {
+    color: #2BC46F;
+  }
+
+  .borderpink {
+    border-color: #FFB1C3;
+  }
+
+  .textpink {
+    color: #FFB1C3;
+  }
+
+  .borderyellow {
+    border-color: #F7E96A;
+  }
+
+  .textyellow {
+    color: #F7E96A;
+  }
+
 
   
 

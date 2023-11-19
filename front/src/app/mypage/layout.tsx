@@ -8,11 +8,9 @@ import Sidebar from '../components/Sidebar';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function TopLayout({
-    children,textColor,borderColor
+    children
   }: {
     children: React.ReactNode
-    textColor:string
-    borderColor:string
   }) {
     return (
       <html lang="ja">
@@ -20,7 +18,7 @@ export default function TopLayout({
             <Header/>  
             <div className='flex'>
                 {/* サイドバーhtml始まり */}
-                <Sidebar textColor = "#FFB1C3" borderColor="#FFB1C3"/>
+                <Sidebar/>
   
   
                 {/* 以下ページコンポーネント領域 */}
