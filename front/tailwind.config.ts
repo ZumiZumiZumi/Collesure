@@ -19,6 +19,7 @@ const config: Config = {
         'green-color':'#2BC46F',
         'pink-color':'#FFB1C3',
         'yellow-color':'#F7E96A',
+        'link-color':'#3B7DFF',
       },
     },
   },

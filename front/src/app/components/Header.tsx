@@ -17,7 +17,7 @@ const Header = ()=>{
     <>
       <div className='bg-white w-screen'>
         <div className='flex mb-14 mt-2 items-center'>
-          <h5 className = "mr-auto ">Collesure</h5>
+          <h5 className = "text-3xl mr-auto ">Collesure</h5>
           <div className='flex items-center mx-auto mt-4 '>
             <input className ='headersearch h-9 rounded-l-md border border-black shadow' type = "text" name = "serach" placeholder='  キーワードを入力して検索'></input>
             <button type = "submit" className='mr-2 bg-gray-200 border border-black rounded-r h-9 w-12 shadow'><SearchIcon/></button>

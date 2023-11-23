@@ -52,7 +52,7 @@ const Sidebar = ()=> {
           </li>
         </ul>
       </div>
-    )
+    );
    
 }
 export default Sidebar;

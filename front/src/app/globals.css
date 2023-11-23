@@ -98,72 +98,73 @@ body {
     width:10vw;
   }
 
-  .borderorange {
-    border-color: #FFB258;
+  /* トップ画面css */
+  .toppop {
+    width: 55vw;
   }
 
-  .textorange {
-    color: #FFB258;
+  /* 検索画面css */
+  .searchoptiontext {
+    width: 85%;
   }
 
-  .borderblue {
-    border-color: #60C6FF;
+  .centercss {
+    justify-content: center;
   }
 
-  .textblue {
-    color: #60C6FF;
+  .searchoptionbg {
+    width: 50vw;
   }
 
-  .bordergreen {
-    border-color: #2BC46F;
+}
+
+@media (max-width: 950px) {
+   /* 検索画面css */
+   .searchoptionbg {
+    width: 475px;
+    margin-left: 0px;
   }
-
-  .textgreen {
-    color: #2BC46F;
-  }
-
-  .borderpink {
-    border-color: #FFB1C3;
-  }
-
-  .textpink {
-    color: #FFB1C3;
-  }
-
-  .borderyellow {
-    border-color: #F7E96A;
-  }
-
-  .textyellow {
-    color: #F7E96A;
-  }
-
-
-  
-
-
 }
 
 @media (max-width: 625px) {
   .list {
     list-style-type: none;
-    padding: 0; 
+    padding-left: 11px;
+    padding-right:11px; 
     display: flex; 
     width:610px;
   }
 
   .headlist {
-    width:125px;
+    width:117.61px;
     margin-top: auto;
   }
 
   .uldiv {
-    width:610px;
+    width:624px;
   }
 
   .headersearch {
     width: 285px;
   }
+
+  /* 検索画面css */
+  .searchoptiontext {
+    width: 376px;
+  }
+
+  .searchoptionbg {
+    width: 475px;
+    margin-left: 15px;
+  }
+
+  .searchoption {
+    width: 400px;
+  }
+
+  .centercss {
+  }
+
 }
 
 .logbutton {
@@ -180,6 +181,13 @@ body {
     width:100px;
   }
 } 
+
+@media (max-width: 900px) {
+    /* top画面 */
+    .toppop {
+      width: 495px;
+    }
+}
   
 /* サイドバーcss始まり */
 .sidebarbox {
@@ -188,4 +196,43 @@ body {
   padding-top: 50px;
 }
 
+.borderorange {
+  border-color: #FFB258;
+}
+
+.textorange {
+  color: #FFB258;
+}
+
+.borderblue {
+  border-color: #60C6FF;
+}
+
+.textblue {
+  color: #60C6FF;
+}
+
+.bordergreen {
+  border-color: #2BC46F;
+}
+
+.textgreen {
+  color: #2BC46F;
+}
+
+.borderpink {
+  border-color: #FFB1C3;
+}
+
+.textpink {
+  color: #FFB1C3;
+}
+
+.borderyellow {
+  border-color: #F7E96A;
+}
+
+.textyellow {
+  color: #F7E96A;
+}
 
