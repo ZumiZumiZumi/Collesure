@@ -23,7 +23,7 @@ export default function TopLayout({
   
                 {/* 以下ページコンポーネント領域 */}
                 <div className=''>
-                    {children}
+                    <main>{children}</main>
                 </div>
             </div>
         </body>

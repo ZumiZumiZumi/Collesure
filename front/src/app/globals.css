@@ -195,6 +195,27 @@ body {
   padding-left: 3vw;
   padding-top: 50px;
 }
+/* サイドバーcss終わり */
+
+/* 投稿css始まり */
+.postimage {
+  width: 550px;
+  height: 400px;
+}
+
+.postcoment {
+  width: 55vw;
+}
+
+/* ログインcss */
+.loginbg {
+  width: 700px;
+}
+
+/* マイページcss始まり */
+.mypagearticle {
+  width: 700px;
+}
 
 .borderorange {
   border-color: #FFB258;

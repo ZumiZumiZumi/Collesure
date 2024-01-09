@@ -6,6 +6,7 @@ import Link from "next/link";
 import checkcolor from './ChangeColor';
 import LoginIcon from '@mui/icons-material/Login';
 import SearchIcon from '@mui/icons-material/Search';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import { usePathname } from 'next/navigation';
 
 
@@ -14,7 +15,6 @@ const Header = ()=>{
   const pathname = usePathname();
   const {nowborder,nowtext} = checkcolor();
   return(
-    <>
       <div className='bg-white w-screen'>
         <div className='flex mb-14 mt-2 items-center'>
           <h5 className = "text-3xl mr-auto ">Collesure</h5>
@@ -22,7 +22,15 @@ const Header = ()=>{
             <input className ='headersearch h-9 rounded-l-md border border-black shadow' type = "text" name = "serach" placeholder='  キーワードを入力して検索'></input>
             <button type = "submit" className='mr-2 bg-gray-200 border border-black rounded-r h-9 w-12 shadow'><SearchIcon/></button>
           </div>
-          <button className='logbutton ml-4 mr-16 mt-3  border border-black rounded-md bg-white shadow whitespace-nowrap'><LoginIcon/> ログイン</button>
+          
+          <button className='logbutton ml-8  mt-3  border border-black rounded-md bg-white shadow whitespace-nowrap'><Link href = "/signup">
+            <HistoryEduIcon/> 新規登録</Link>
+          </button>
+
+          <button className='logbutton ml-4 mr-16 mt-3  border border-black rounded-md bg-white shadow whitespace-nowrap'>
+            <Link href = "/login"><LoginIcon/> ログイン</Link>
+          </button>
+
         </div>
         <div className={`uldiv headerh flex w-screen justify-center  border-b-4 ${nowborder}`}>
           <ul className='list  text-center'>
@@ -54,7 +62,6 @@ const Header = ()=>{
           </ul>
         </div>
       </div>
-    </>
   );
 }
 export default Header;

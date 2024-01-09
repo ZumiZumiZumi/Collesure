@@ -21,6 +21,10 @@ const config: Config = {
         'yellow-color':'#F7E96A',
         'link-color':'#3B7DFF',
       },
+      screens: {
+        'clg':'1225px',
+        'cmd':'900px',
+      },
     },
   },
   plugins: [],

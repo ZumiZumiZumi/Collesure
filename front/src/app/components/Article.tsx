@@ -7,7 +7,6 @@ const Article = ()=> {
 
     return(
         <div className='w-80 mx-16 mt-12'>
-            <input type = "text"/>
             <ul className="">
                 <Link className="" href = "">
                     <li>

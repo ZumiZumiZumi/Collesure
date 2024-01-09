@@ -2,6 +2,7 @@ import Link from "next/link";
 import '../globals.css'
 import Article from "../components/Article";
 import ViewArticles from "../components/ViewArticles";
+import Modal from "../components/Modal";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             </div>
             <div className="flex searchoption">
               <button className = "mr-4 px-2 bg-white rounded whitespace-nowrap" id ="btnid"><span>+</span>タグを追加する</button>
+              <Modal buttonLabel="Open Modal" />
               <script>
                 const btn = document.getElementById("btnid");
                 

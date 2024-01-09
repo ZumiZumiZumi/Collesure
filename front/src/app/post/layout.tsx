@@ -22,7 +22,7 @@ export default function TopLayout({
   
   
                 {/* 以下ページコンポーネント領域 */}
-                <div className=''>
+                <div className='w-full'>
                     {children}
                 </div>
             </div>

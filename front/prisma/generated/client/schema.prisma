@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "generated/client"
+}
+
+
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  user_id       Int       @id @default(autoincrement())
+  user_name     String    
+  user_mail     String    @unique
+  user_pass     String
+  user_created  DateTime  @default(now())
+  user_icon     String
+  user_coment   String
+  follow        follows[]
+  article       articles[]
+  tag           tags[]
+  good          goods[]
+  read          reads[]
+}
+
+model follows {
+  author1         users     @relation(fields: [follow_id], references:[user_id])
+  follow_id       Int       @id       
+}
+
+model tags {
+  tag_id        Int         @id @default(autoincrement())
+  tag_name      String
+  author        users       @relation(fields: [userId], references:[user_id])
+  userId        Int
+  maintag       maintags?
+  subtag        subtags[]
+}
+
+model articles {
+  article_id      Int       @id @default(autoincrement())
+  article_title   String
+  article_image   String
+  article_created DateTime  @default(now())
+  article_updated DateTime  @updatedAt
+  author          users     @relation(fields: [userId], references:[user_id])
+  userId          Int
+  maintag         maintags?
+  subtag          subtags[]
+  read            reads[]
+  good            goods[]
+}
+
+model goods {
+  author1         users     @relation(fields: [userId], references:[user_id])
+  userId          Int       @id
+  author2         articles  @relation(fields: [articleId], references:[article_id])
+  articleId       Int
+  good_created    DateTime  @default(now())
+}
+
+model reads {
+  author1         users     @relation(fields: [userId], references:[user_id])
+  userId          Int       @id
+  read_created    DateTime  @default(now())
+  author2         articles  @relation(fields: [articleId], references:[article_id])
+  articleId       Int       @unique
+}
+
+model maintags {
+  author1       articles    @relation(fields: [articleId], references:[article_id])
+  articleId     Int         @id
+  author2       tags        @relation(fields: [tagId], references:[tag_id])
+  tagId         Int         @unique
+}
+
+model subtags {
+  author1       articles    @relation(fields: [articleId], references:[article_id])
+  articleId     Int         @id
+  author2       tags        @relation(fields: [tagId], references:[tag_id])
+  tagId         Int
+}
